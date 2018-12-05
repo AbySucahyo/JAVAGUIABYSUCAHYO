@@ -74,6 +74,12 @@ public class Latihan2 extends javax.swing.JFrame {
         jLabel5.setText("Hobi");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(50, 210, 33, 20);
+
+        varNama.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                varNamaActionPerformed(evt);
+            }
+        });
         getContentPane().add(varNama);
         varNama.setBounds(130, 90, 440, 26);
         getContentPane().add(varAbsen);
@@ -95,6 +101,11 @@ public class Latihan2 extends javax.swing.JFrame {
         rdbRpl.setBounds(330, 170, 59, 29);
 
         cbProgramming.setText("Programming");
+        cbProgramming.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbProgrammingActionPerformed(evt);
+            }
+        });
         getContentPane().add(cbProgramming);
         cbProgramming.setBounds(130, 210, 140, 29);
 
@@ -224,6 +235,14 @@ public class Latihan2 extends javax.swing.JFrame {
         taHasil.setText("Nama anda :" +nama+"\nAbsen anda :" +absen+ 
                 "\nJurusan anda :" +jurusan+ "\nHobi anda :" +hobi);
     }//GEN-LAST:event_btSubmitActionPerformed
+
+    private void cbProgrammingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbProgrammingActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbProgrammingActionPerformed
+
+    private void varNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_varNamaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_varNamaActionPerformed
 
     /**
      * @param args the command line arguments

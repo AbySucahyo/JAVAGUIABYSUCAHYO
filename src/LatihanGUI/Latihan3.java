@@ -5,6 +5,8 @@
  */
 package LatihanGUI;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Aby
@@ -67,6 +69,12 @@ public class Latihan3 extends javax.swing.JFrame {
         jLabel3.setText("Berat Badan");
         jPanel1.add(jLabel3);
         jLabel3.setBounds(210, 200, 90, 20);
+
+        nama.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                namaActionPerformed(evt);
+            }
+        });
         jPanel1.add(nama);
         nama.setBounds(320, 150, 380, 26);
 
@@ -81,6 +89,12 @@ public class Latihan3 extends javax.swing.JFrame {
         jLabel4.setText("Tinggi Badan");
         jPanel1.add(jLabel4);
         jLabel4.setBounds(210, 250, 100, 20);
+
+        tinggiBadan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tinggiBadanActionPerformed(evt);
+            }
+        });
         jPanel1.add(tinggiBadan);
         tinggiBadan.setBounds(320, 250, 380, 26);
 
@@ -90,6 +104,11 @@ public class Latihan3 extends javax.swing.JFrame {
 
         jenisKelamin.add(rdbperempuan);
         rdbperempuan.setText("Perempuan");
+        rdbperempuan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdbperempuanActionPerformed(evt);
+            }
+        });
         jPanel1.add(rdbperempuan);
         rdbperempuan.setBounds(500, 300, 113, 29);
 
@@ -123,6 +142,12 @@ public class Latihan3 extends javax.swing.JFrame {
         jLabel6.setText("Berat Badan ideal anda adalah :");
         jPanel1.add(jLabel6);
         jLabel6.setBounds(210, 420, 230, 20);
+
+        ideal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                idealActionPerformed(evt);
+            }
+        });
         jPanel1.add(ideal);
         ideal.setBounds(450, 420, 70, 26);
 
@@ -136,15 +161,30 @@ public class Latihan3 extends javax.swing.JFrame {
         jLabel8.setBounds(210, 480, 250, 20);
 
         hasil.setText("?");
+        hasil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hasilActionPerformed(evt);
+            }
+        });
         jPanel1.add(hasil);
         hasil.setBounds(210, 510, 430, 40);
 
         saran.setText("Saran?");
+        saran.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saranActionPerformed(evt);
+            }
+        });
         jPanel1.add(saran);
         saran.setBounds(210, 560, 430, 40);
 
         jenisKelamin.add(rdblaki);
         rdblaki.setText("Laki-laki");
+        rdblaki.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdblakiActionPerformed(evt);
+            }
+        });
         jPanel1.add(rdblaki);
         rdblaki.setBounds(320, 300, 91, 29);
 
@@ -176,14 +216,15 @@ public class Latihan3 extends javax.swing.JFrame {
     }//GEN-LAST:event_beratBadanActionPerformed
 
     private void btHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btHitungActionPerformed
-        // TODO add your handling code here:
+           // TODO add your handling code here:
         double t, b, h = 0;
         
         //untuk mengambil nilai tinggi dan berat serta nama
+        try{
         t = Double.valueOf(tinggiBadan.getText());
         b = Double.valueOf(beratBadan.getText());
         String nm = nama.getText();
-        
+ 
         //pilihan jenis kelamin
         if(rdblaki.isSelected()){
             h = (t-100);                      
@@ -207,7 +248,11 @@ public class Latihan3 extends javax.swing.JFrame {
             hasil.setText("Berat badan anda sudah ideal");
             saran.setText("Pertahankan");
         
-        }           
+        }
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(null,"Error : "+"Kotak input belum terisi","Message",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
     }//GEN-LAST:event_btHitungActionPerformed
 
     private void btUlangiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btUlangiActionPerformed
@@ -226,6 +271,34 @@ public class Latihan3 extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_btKeluaActionPerformed
+
+    private void idealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idealActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_idealActionPerformed
+
+    private void namaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_namaActionPerformed
+
+    private void tinggiBadanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tinggiBadanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tinggiBadanActionPerformed
+
+    private void rdblakiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdblakiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rdblakiActionPerformed
+
+    private void rdbperempuanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbperempuanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rdbperempuanActionPerformed
+
+    private void hasilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hasilActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hasilActionPerformed
+
+    private void saranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saranActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_saranActionPerformed
 
     /**
      * @param args the command line arguments
